@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import cn.hudp.androidnote.R;
+import cn.hudp.androidnote.databinding.ActivityMvvmBinding;
 
 public class MvvmActivity extends AppCompatActivity {
 
@@ -12,6 +13,7 @@ public class MvvmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_mvvm);
-              DataBindingUtil.setContentView(this, R.layout.activity_main);
+        ActivityMvvmBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_mvvm);
+        binding.setData(new Bean("你好", "男生"));
     }
 }

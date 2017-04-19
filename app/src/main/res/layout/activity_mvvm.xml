@@ -2,10 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
-        <variable
-            name="bean"
-            type="cn.hudp.androidnote.MVVM.Bean" />
+        <variable type="cn.hudp.androidnote.MVVM.Bean"
+            name="data"></variable>
     </data>
 
     <LinearLayout
@@ -16,11 +14,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:text="@{bean.name}" />
+            android:text="@{data.name}" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:text="@{bean.sex}" />
+            android:text="@{data.sex}" />
     </LinearLayout>
 </layout>
