@@ -7,6 +7,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -35,13 +36,19 @@ public class MainActivity extends AppCompatActivity {
             adapter = new BaseQuickAdapter<ChapterData.Data, BaseViewHolder>(R.layout.item_main, datas) {
                 @Override
                 protected void convert(BaseViewHolder helper, final ChapterData.Data item) {
-                    helper.setText(R.id.tv_title, item.getName());
-                    helper.setOnClickListener(R.id.tv_title, new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            startActivity(new Intent(MainActivity.this, item.getmClass()));
-                        }
-                    });
+                    final String name = item.getName();
+                    final Class clz = item.getmClass();
+                    helper.setText(R.id.tv_title, name);
+                    if (clz != null) {
+                        helper.setOnClickListener(R.id.tv_title, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(MainActivity.this, clz));
+                            }
+                        });
+                    } else {
+                        Toast.makeText(mContext, "暂无" + name, Toast.LENGTH_SHORT).show();
+                    }
                 }
             };
             adapter.loadMoreEnd();

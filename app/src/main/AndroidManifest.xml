@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".ViewTouch1.ViewTouchActivity" />
         <activity android:name=".MVVM.MvvmActivity"></activity>
+        <activity android:name=".StateView.StateViewActivity"/>
     </application>
 
 </manifest>
