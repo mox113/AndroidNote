@@ -4,11 +4,11 @@ package cn.hudp.androidnote.MVVM;
  * Created by HuDP on 2017/4/18.
  */
 
-public class Bean {
+public class MvvmBean {
     public String name;
     public String sex;
 
-    public Bean(String name, String sex) {
+    public MvvmBean(String name, String sex) {
         this.name = name;
         this.sex = sex;
     }

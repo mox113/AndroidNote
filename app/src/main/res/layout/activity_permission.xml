@@ -2,23 +2,26 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <variable type="cn.hudp.androidnote.MVVM.MvvmBean"
-            name="data"></variable>
+        <variable
+            name="bean"
+            type="cn.hudp.androidnote.MVVM.MvvmBean"/>
+        <variable
+            name="activity"
+            type="cn.hudp.androidnote.Permission.PermissionActivity"/>
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:text="@{data.name}" />
-
-        <TextView
+            android:text="@{bean.name}"/>
+        <Button
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:text="@{data.sex}" />
+            android:onClick="@{activity.onClick}"
+            android:text="获取IMEI" />
     </LinearLayout>
 </layout>

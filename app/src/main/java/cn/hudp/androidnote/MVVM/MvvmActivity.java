@@ -14,6 +14,6 @@ public class MvvmActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_mvvm);
         ActivityMvvmBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_mvvm);
-        binding.setData(new Bean("你好", "男生"));
+        binding.setData(new MvvmBean("你好", "男生"));
     }
 }
