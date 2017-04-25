@@ -14,11 +14,13 @@ import android.widget.Toast;
 
 import cn.hudp.androidnote.MVVM.MvvmBean;
 import cn.hudp.androidnote.R;
+import cn.hudp.androidnote.Utils.PermissionsUtil;
 import cn.hudp.androidnote.databinding.ActivityPermissionBinding;
 
 public class PermissionActivity extends AppCompatActivity {
     ActivityPermissionBinding binding;
     MvvmBean bean;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,10 @@ public class PermissionActivity extends AppCompatActivity {
         } else {
             getIMEI();
         }
+    }
+
+    public void permission(View view) {
+        PermissionsUtil.checkAndRequestPermissions(this);
     }
 
     /**

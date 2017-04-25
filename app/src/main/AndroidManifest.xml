@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.hudp.androidnote">
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,9 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewTouch1.ViewTouchActivity" />
-        <activity android:name=".MVVM.MvvmActivity"/>
-        <activity android:name=".StateView.StateViewActivity"/>
-        <activity android:name=".Permission.PermissionActivity"/>
+        <activity android:name=".MVVM.MvvmActivity" />
+        <activity android:name=".StateView.StateViewActivity" />
+        <activity android:name=".Permission.PermissionActivity" />
     </application>
 
 </manifest>
